@@ -1,0 +1,208 @@
+/* RESET de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo para o Header */
+header {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para o cabeçalho */
+}
+
+.logo-img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Estilo da seção Hero */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Botões de Acordeão */
+.accordion {
+    margin: 30px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    text-align: left;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adicionando transição de transformação */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.accordion-button:hover {
+    background-color: #444;
+    transform: translateX(5px); /* Efeito de movimento ao passar o mouse */
+}
+
+/* Conteúdo das Seções */
+.section-content {
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+/* Estilo de imagem na seção "imagem" */
+.imagem {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.img-responsive {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do Mapa */
+iframe {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o footer */
+}
+
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s ease; /* Transição de cor e transformação */
+}
+
+.social-icon:hover {
+    color: #e8c547;
+    transform: translateY(-5px); /* Efeito de leve movimento para cima */
+}
+
+/* Ajustes para Links de WhatsApp e Instagram */
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #e8c547; /* Cor de destaque quando o link é clicado */
+}
+
+/* Estilos para o Instagram Feed */
+#instagram-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#instagram-feed a {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para os links de imagem */
+}
+
+#instagram-feed img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .accordion-button {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    .section-content {
+        padding: 10px;
+    }
+
+    .img-responsive {
+        max-width: 100%;
+    }
+
+    /* Ajustes no Instagram Feed */
+    #instagram-feed a {
+        max-width: 100%;
+    }
+}
+
+/* Estilo do ícone do WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px;  /* Distância da borda direita */
+    z-index: 1000; /* Garantir que fique sobre os outros elementos */
+}
+
+.whatsapp-img {
+    width: 60px;  /* Ajuste o tamanho do ícone */
+    height: 60px; /* Ajuste o tamanho do ícone */
+    border-radius: 50%; /* Tornar o ícone arredondado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras para dar destaque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição suave */
+}
+
+/* Efeito de hover (quando passar o mouse sobre o ícone) */
+.whatsapp-icon:hover .whatsapp-img {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte para o hover */
+}

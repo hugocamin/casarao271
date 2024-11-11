@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/instafeed.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Casarão 271</title>
+    <link rel="stylesheet" href="modelo.css">
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block"; 
+            } else {
+                section.style.display = "none"; 
+            }
+        }
+    </script>
+    <style>
+        /* Estilo do container para o mapa e o feed */
+        .map-instagram-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px; /* Espaço entre o mapa e o feed */
+            margin-top: 20px;
+        }
+
+        /* Estilo para o mapa */
+        .map-container {
+            flex: 1;
+            min-width: 400px;
+        }
+
+        /* Estilo para o feed do Instagram */
+        .instagram-container {
+            flex: 1;
+            min-width: 400px;
+        }
+
+        /* Responsividade: Ajustar layout para telas pequenas */
+        @media (max-width: 768px) {
+            .map-instagram-container {
+                flex-direction: column; /* Empilhar os elementos em telas pequenas */
+                align-items: center;
+            }
+
+            .map-container, .instagram-container {
+                min-width: 100%; /* Fazer os elementos ocuparem 100% da largura */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo da Barbearia" class="logo-img">
+        </div>
+    </header>
+
+    <main>
+        <!-- Botões para alternar visibilidade das seções -->
+        <div class="accordion">
+            <button onclick="toggleSection('sobre')" class="accordion-button">Quem somos</button>
+            <section id="sobre" class="section-content" style="display:none;">
+                <h3>Quem somos</h3>
+                <p>Desde 2014, nossos profissionais atendem com excelência na região do Cambuí e desde 2022 em um novo endereço, oferecendo ainda mais conforto e comodidade para você.</p>
+            </section>
+
+            <button onclick="toggleSection('agendamentos')" class="accordion-button">Agendamentos</button>
+            <section id="agendamentos" class="section-content" style="display:none;">
+                <h3>Agende seu horário</h3>
+                <h2>(19) 33078520 </h2>
+                <h2>(19) 981134775 </h2>   
+            </section>
+
+        
+            <!-- Endereço e Mapa -->
+            <button onclick="toggleSection('endereço')" class="accordion-button">Endereço</button>
+            <section id="endereço" class="section-content" style="display:none;">
+                <h3></h3>
+                <p> Rua Doutor Sampaio Peixoto, 271, Cambuí - Campinas - SP</p>
+                <div class="map-instagram-container">
+                    <!-- Mapa -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14702.616062638488!2d-47.0526573!3d-22.8892359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cf571285d6a7%3A0x2103db5c9f62739c!2sCasar%C3%A3o%20271!5e0!3m2!1spt-BR!2sbr!4v1731348826218!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-9ede0295-8c1e-4b6f-8355-6260a15d2485" data-elfsight-app-lazy></div>
+
+    <footer>
+        <p>&copy; 2024 Barbearia Casarão 271. Todos os direitos reservados.</p>
+    </footer>
+    
+    <a href="https://wa.me/5519981134775?text=Olá%20gostaria%20de%20agendar%20um%20horário" target="_blank" class="whatsapp-icon">
+        <img src="whatsapp1.png" alt="WhatsApp" class="whatsapp-img">
+    </a>
+</body>
+</html>
